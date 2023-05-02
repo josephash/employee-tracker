@@ -1,6 +1,16 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
 
+const db = mysql.createConnection(
+	{
+		host: 'localhost',
+		user: 'root',
+		password: 'kerbal255',
+		database: 'employee_db'
+	},
+	console.log('Connected to database.')
+);
+
 async function startApp() {
 	let cont = true;
 	while (cont) {
